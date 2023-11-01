@@ -13,7 +13,7 @@
         $DiscountUpdate = $_POST['DiscountUpdate'];
 
         $update = new OrderModel;
-        $result = $update->editOrders($CustomerIDUpdate, $CompanyNameUpdate, $ContactNameUpdate, $ContactTitleUpdate, $AddressUpdate, $CityUpdate, $RegionUpdate, $PostalCodeUpdate, $CountryUpdate, $PhoneUpdate, $FaxUpdate);
+        $result = $update->editOrders($OrderIDUpdate, $CompanyNameUpdate, $ContactNameUpdate, $ShipperNameUpdate, $PhoneUpdate, $ProductNameUpdate, $UnitPriceUpdateUpdate, $PostalCodeUpdate, $CountryUpdate, $PhoneUpdate, $FaxUpdate);
 
         header("location: ../../views/orderView");
     }
