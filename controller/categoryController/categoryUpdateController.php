@@ -5,11 +5,13 @@
         $CategoryIDUpdate = $_POST['CategoryIDUpdate'];
         $CategoryNameUpdate = $_POST['CategoryNameUpdate'];
         $CategoryDescriptionUpdate = $_POST['CategoryDescriptionUpdate'];
-        $PictureUpdate = $_POST['PictureUpdate'];
+        /* $PictureUpdate = $_POST['PictureUpdate']; */
 
         $update = new CategoryModel;
-        $result = $update->editCategory($categoryName, $categoryDescription, $picture, $CategoryIDUpdate);
+        $result = $update->editCategory(
+            $CategoryIDUpdate, $CategoryNameUpdate, 
+            $CategoryDescriptionUpdate);
 
-        header("location: ../../views/categories/categoryView.php");
+        header("location: ../../views/categories"); 
     }
 ?>

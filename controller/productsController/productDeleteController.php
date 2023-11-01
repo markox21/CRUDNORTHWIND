@@ -6,6 +6,6 @@ $productModel = new productModel();
 
 $productModel->deleteProduct($_GET['id']);
 
-header("Location: ../../views/productosView.php");
+header("Location: ../../views/products");
 
 ?>

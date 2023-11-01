@@ -5,7 +5,7 @@
 </head>
 <body>
     <h1>Ingresar Empleado</h1>
-    <form action="../controller/employeeController/employeeInsertController.php" method="POST">
+    <form action="../../controller/employeeController/employeeInsertController.php" method="POST">
         
         <label for="employeeLastName">Apellido del Empleado:</label>
         <input type="text" name="employeeLastName" required><br>
@@ -40,21 +40,12 @@
         <label for="employeeCountry">Country:</label>
         <input type="text" name="employeeCountry" required><br>
 
-        <label for="employeeHomePhone">Home Phone:</label>
+        <label for="employeeHomePhone">Telefono de Casa:</label>
         <input type="text" name="employeeHomePhone" required><br>
 
-        <label for="employeeExtension">Extension:</label>
-        <input type="text" name="employeeExtension" required><br>
+        <label for="employeeReportTo">Encargo De:</label>
+        <input type="text" name="employeeReportTo" required><br>
 
-        <label for="employeePhoto">Photo:</label>
-        <input type="text" name="employeePhoto"><br>
-
-        <label for="employeeNotes">Notes:</label>
-        <input type="text" name="employeeNotes" required><br>
-
-        <label for="employeePhotoPath">PhotoPath:</label>
-        <input type="text" name="employeePhotoPath" required><br>
-        
         <button type="submit">Agregar Empleado</button>
     </form>
 </body>

@@ -4,11 +4,11 @@
     if ($_POST) {
         $CategoryName = $_POST['CategoryName'];
         $Description = $_POST['Description'];
-        $Picture = $_POST['Picture'];
+        /* $Picture = $_POST['Picture']; */
 
         $update = new CategoryModel;
-        $result = $update->insertCategory($CategoryName, $Description, $Picture);
+        $result = $update->insertCategory($CategoryName, $Description);
 
-        header("location: ../../views/categories/categoryView.php");
+        header("location: ../../views/categories");
     }
 ?>

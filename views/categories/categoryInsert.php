@@ -11,8 +11,8 @@
             <input type="text" name= "CategoryName"><br>
             <label for="Description">Description</label>
             <input type="text" name="Description"><br>
-            <label for="Picture">Picture</label>
-            <input type="text" name="Picture"><br>
+            <!-- <label for="Picture">Picture</label>
+            <input type="text" name="Picture"><br> -->
 
             <button type="submit">Confirmar</button>
         </form>

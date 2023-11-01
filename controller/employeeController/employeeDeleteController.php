@@ -6,6 +6,6 @@ $employeeModel = new EmployeeModel();
 
 $employeeModel->deleteEmployee($_GET['id']);
 
-header("Location: ../../views/employeeView.php");
+header("Location: ../../views/employee");
 
 ?>

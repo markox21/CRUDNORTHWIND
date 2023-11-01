@@ -14,7 +14,7 @@ class CustomerModel {
 
     public function getCustomers() {
         $pdo = $this->database->connect();
-        $query = "SELECT * FROM customers";
+        $query = "CALL Sp_Mostrar_Cliente()";
         $stmt = $pdo->query($query);
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
@@ -22,9 +22,13 @@ class CustomerModel {
     public function selectCustomer($id) {
         try {
          $pdo = $this->database->connect();
-         $stmt = $pdo->prepare("SELECT * FROM customers WHERE CustomerID = ?");
-         $stmt-> execute([$id]);
+         $query = "CALL Sp_Read_Cliente(:C_ID)";
+         $stmt = $pdo->prepare($query);
+         $stmt->bindParam(':C_ID', $id, PDO::PARAM_STR);
+         $stmt-> execute();
+
          return $stmt->fetch(PDO::FETCH_OBJ);
+         
         } catch (PDOException $e) {
          return $e->getMessage();
         }
@@ -32,12 +36,12 @@ class CustomerModel {
     }
 
 
-    public function insertCustomer($customerID, $companyName, $contactName, $contactTitle, $adress, $city, $region, $postalCode, $country, $phone, $fax) {
+    public function insertCustomer($companyName, $contactName, $contactTitle, $adress, $city, $region, $postalCode, $country, $phone, $fax) {
         try{
 
             $pdo = $this->database->connect();
 
-            $stmt = $pdo->prepare("CALL Sp_Ins_Cliente(:C_CompanyName, :C_ContactName, :C_ContactTitle, :C_Adress, :C_City, :C_Region, :C_PostalCode, :C_Country, :C_Phone, :C_Fax, :C_Customer)");
+            $stmt = $pdo->prepare("CALL Sp_Ins_Cliente(:C_CompanyName, :C_ContactName, :C_ContactTitle, :C_Adress, :C_City, :C_Region, :C_PostalCode, :C_Country, :C_Phone, :C_Fax)");
             
             $stmt->bindParam(':C_CompanyName', $companyName, PDO::PARAM_STR);
             $stmt->bindParam(':C_ContactName', $contactName, PDO::PARAM_STR);
@@ -49,9 +53,9 @@ class CustomerModel {
             $stmt->bindParam(':C_Country', $country, PDO::PARAM_STR);
             $stmt->bindParam(':C_Phone', $phone, PDO::PARAM_STR);
             $stmt->bindParam(':C_Fax', $fax, PDO::PARAM_STR);
-            $stmt->bindParam(':C_Customer', $customerID, PDO::PARAM_STR);
+           /*  $stmt->bindParam(':C_Customer', $customerID, PDO::PARAM_STR); */
 
-            $stmt->execute();
+            return $stmt->execute();
         
         }
         catch(PDOException $e){
@@ -80,9 +84,9 @@ class CustomerModel {
 
             $pdo = $this->database->connect();
 
-            $stmt = $pdo->prepare("CALL Sp_Edit_Cliente(:C_Customer, :C_CompanyName, :C_ContactName, :C_ContactTitle, :C_Adress, :C_City, :C_Region, :C_PostalCode, :C_Country, :C_Phone, :C_Fax)");
+            $stmt = $pdo->prepare("CALL Sp_Upd_Cliente(:C_ID, :C_CompanyName, :C_ContactName, :C_ContactTitle, :C_Adress, :C_City, :C_Region, :C_PostalCode, :C_Country, :C_Phone, :C_Fax)");
             
-            $stmt->bindParam(':C_Customer', $customerID, PDO::PARAM_STR);
+            $stmt->bindParam(':C_ID', $customerID, PDO::PARAM_STR);
             $stmt->bindParam(':C_CompanyName', $companyName, PDO::PARAM_STR);
             $stmt->bindParam(':C_ContactName', $contactName, PDO::PARAM_STR);
             $stmt->bindParam(':C_ContactTitle', $contactTitle, PDO::PARAM_STR);
@@ -94,7 +98,7 @@ class CustomerModel {
             $stmt->bindParam(':C_Phone', $phone, PDO::PARAM_STR);
             $stmt->bindParam(':C_Fax', $fax, PDO::PARAM_STR);
 
-            $stmt->execute();
+            return $stmt->execute();
         
         }
         catch(PDOException $e){
@@ -111,7 +115,7 @@ class CustomerModel {
 
             $stmt->bindParam(':clienteID', $id, PDO::PARAM_STR);
 
-            $stmt->execute();
+            return $stmt->execute();
         }
         catch(PDOException $e){
             return $e->getMessage();

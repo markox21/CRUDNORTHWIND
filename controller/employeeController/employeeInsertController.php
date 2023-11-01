@@ -1,32 +1,42 @@
 <?php
-require ("../../models/productModel.php");
+require ("../../models/employeeModel.php");
 
-##insert products 
-    $productModel = new productModel();
-
-
-    $employeeLastName = $_POST['employeeLastName'];
-    $employeeFirstName = $_POST['employeeFirstName'];
-    $employeeTitle = $_POST['employeeTitle'];
-    $employeeTitleCourtesy = $_POST['employeeTitleCourtesy'];
-    $employeeBirthDate = $_POST['employeeBirthDate'];
-    $employeeHireDate = $_POST['employeeHireDate'];
-    $employeeAdress = $_POST['employeeAdress'];
-    $employeeCity = $_POST['employeeCity'];
-    $employeeRegion = $_POST['employeeRegion'];
-    $employeePostalCode = $_POST['employeePostalCode'];
-    $employeeCountry = $_POST['employeeCountry'];
-    $employeeHomePhone = $_POST['employeeHomePhone'];
-    $employeeExtension = $_POST['employeeExtension'];
-    $employeePhoto = $_POST['employeePhoto'];
-    $employeeNotes = $_POST['employeeNotes'];
-    $employeePhotoPath = $_POST['employeePhotoPath'];
+##insert Employee
+    
+    if ($_POST) {
+        $employeeLastName = $_POST['employeeLastName'];
+        $employeeFirstName = $_POST['employeeFirstName'];
+        $employeeTitle = $_POST['employeeTitle'];
+        $employeeTitleCourtesy = $_POST['employeeTitleCourtesy'];
+        $employeeBirthDate = $_POST['employeeBirthDate'];
+        $employeeHireDate = $_POST['employeeHireDate'];
+        $employeeAddress = $_POST['employeeAdress'];
+        $employeeCity = $_POST['employeeCity'];
+        $employeeRegion = $_POST['employeeRegion'];
+        $employeePostalCode = $_POST['employeePostalCode'];
+        $employeeCountry = $_POST['employeeCountry'];
+        $employeeHomePhone = $_POST['employeeHomePhone'];
+        $employeeReportTo = $_POST['employeeReportTo'];
 
 
 
-    $productModel->insertProduct($employeeLastName, $employeeFirstName, $employeeTitle, $employeeTitleCourtesy, $employeeBirthDate, $employeeHireDate, $employeeAdress, $employeeCity, $employeeRegion);
+        /* echo $employeeLastName, $employeeFirstName, $employeeTitle,
+        $employeeTitleCourtesy, $employeeBirthDate,  $employeeHireDate,
+        $employeeAddress, $employeeCity, $employeeRegion, $employeePostalCode,
+        $employeeCountry, $employeeHomePhone, $employeeReportTo; */
 
-    $products = $productModel->getProducts();
+        $productModel = new EmployeeModel();
+        $productModel->insertEmployee(
+            $employeeLastName, $employeeFirstName, 
+            $employeeTitle, $employeeTitleCourtesy, 
+            $employeeBirthDate, $employeeHireDate, 
+            $employeeAddress, $employeeCity, 
+            $employeeRegion, $employeePostalCode, 
+            $employeeCountry, $employeeHomePhone, 
+            $employeeReportTo
+        );
 
-    header("Location: ../../views/productosView.php");
+
+    header("Location: ../../views/employee"); 
+    }
 

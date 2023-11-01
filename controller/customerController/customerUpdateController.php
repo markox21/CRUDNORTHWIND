@@ -15,7 +15,14 @@
         $FaxUpdate = $_POST['FaxUpdate'];
 
         $update = new CustomerModel;
-        $result = $update->editCustomer($CustomerIDUpdate, $CompanyNameUpdate, $ContactNameUpdate, $ContactTitleUpdate, $AddressUpdate, $CityUpdate, $RegionUpdate, $PostalCodeUpdate, $CountryUpdate, $PhoneUpdate, $FaxUpdate);
+        $result = $update->editCustomer(
+            $CustomerIDUpdate, $CompanyNameUpdate, 
+            $ContactNameUpdate, $ContactTitleUpdate, 
+            $AddressUpdate, $CityUpdate, 
+            $RegionUpdate, $PostalCodeUpdate, 
+            $CountryUpdate, $PhoneUpdate, 
+            $FaxUpdate
+        );
 
         header("location: ../../views/customer");
     }

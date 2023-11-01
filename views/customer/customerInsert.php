@@ -7,8 +7,8 @@
 </head>
 <body>
         <form action="../../controller/customerController/customerInsertController.php" method="post">
-            <label for="CustomerID">ID customer</label>
-            <input type="text" name= "CustomerID"><br>
+           <!--  <label for="CustomerID">ID customer</label>
+            <input type="text" name= "CustomerID"><br> -->
             <label for="CompanyName">Company Name</label>
             <input type="text" name="CompanyName"><br>
             <label for="ContactName">Contact Name</label>

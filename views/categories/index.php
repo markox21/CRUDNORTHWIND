@@ -6,7 +6,7 @@
 <body>
     <h1>Listado de Categorias</h1>
 
-    <a href="categoryInsert.php">RegistrarCategoria</a>
+    <a href="categoryInsert.php">Registrar Categoria</a>
     <table border="1">
         <tr>
             <th>Category ID</th>

@@ -20,8 +20,8 @@
             <th>Acciones</th>
         </tr>
         <?php
-        require("../controller/productController.php");
-        $controller = new ProductController(new ProductModel());
+        require("../../controller/productsController/productShowController.php");
+        $controller = new ProductController();
         $products = $controller->showProducts();
 
         foreach ($products as $product) : ?>
@@ -37,7 +37,7 @@
                 <td><?php echo $product['Niveles']; ?></td>
                 <td><?php echo $product['Discontinued']; ?></td>
                 <td>
-                <a href="../controller/productosController/productDeleteController.php?id=<?php echo $product['ID_P']; ?>">Eliminar</a>
+                <a href="../../controller/productsController/productDeleteController.php?id=<?php echo $product['ID_P']; ?>">Eliminar</a>
 
                 </td>
             </tr>

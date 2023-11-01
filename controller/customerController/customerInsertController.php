@@ -2,7 +2,6 @@
     require("../../models/customerModel.php");
 
     if ($_POST) {
-        $CustomerID = $_POST['CustomerID'];
         $CompanyName = $_POST['CompanyName'];
         $ContactName = $_POST['ContactName'];
         $ContactTitle = $_POST['ContactTitle'];
@@ -15,7 +14,7 @@
         $Fax = $_POST['Fax'];
 
         $update = new CustomerModel;
-        $result = $update->insertCustomer($CustomerID, $CompanyName, $ContactName, $ContactTitle, $Address, $City, $Region, $PostalCode, $Country, $Phone, $Fax);
+        $result = $update->insertCustomer($CompanyName, $ContactName, $ContactTitle, $Address, $City, $Region, $PostalCode, $Country, $Phone, $Fax);
 
         header("location: ../../views/customer");
     }

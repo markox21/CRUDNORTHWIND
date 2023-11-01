@@ -7,6 +7,6 @@ $categoryModel = new categoryModel();
 
 $categoryModel->deleteCategory($recibirID);
 
-header("Location: ../../views/categories/categoryView.php");
+header("Location: ../../views/categories");
 
 ?>

@@ -1,5 +1,5 @@
 <?php
-require_once '../models/employeeModel.php';
+require '../../models/employeeModel.php';
 class EmployeeController {
     public function showEmployee() {
         $employeeModel = new EmployeeModel();
@@ -7,7 +7,13 @@ class EmployeeController {
 
         return $employees;
         
-        require '../views/employeeView.php';
+    }
+
+    public function showOneEmployee($id) {
+        $employeeModel = new EmployeeModel();
+        $employees = $employeeModel->getOneEmployee($id);
+
+        return $employees;
     }
 }
 
