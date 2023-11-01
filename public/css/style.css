@@ -1,0 +1,186 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.body-content{
+    background-image: url(../img/fondo-typ.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* * Home Estilos */
+main{
+    width: 100%;
+    height: 100vh;
+}
+.div-content-banner{
+    width: 80%;
+    margin: auto;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    align-items: center;
+    
+}
+.img-fondo{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+}
+.title-h3{
+    font-weight: 200;
+    font-size: 3rem;
+}
+.title-h2{
+    font-size: 4rem;
+}
+
+/* * Barra de Navegacion */
+.navBar-home{
+    width: 100%;
+    height: 80px;
+    background-color: #000;
+}
+.list-ul-Nav{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.list-ul-Nav li a{
+    list-style: none;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+.list-ul-Nav li a:hover{
+    color: gray;
+}
+.list-ul-Nav li{
+    color: #fff;
+    list-style: none;
+    font-size: 1.3rem;
+}
+/* * Estilos Generales */
+h1{
+    text-align: left;
+    margin: 20px;
+}
+h1 ~ a{
+    margin-left: 20px;
+    text-decoration: none;
+    background-color: #0174BE;
+    color: #fff;
+    padding: 10px;
+    border-radius: 6px;
+}
+h1 ~ a:hover{
+    background-color: #289ce4;
+}
+table{
+    margin-left: 20px;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+th, td{
+    padding: 10px;
+}
+td a:first-child{
+    text-decoration: none;
+    color: rgb(37, 167, 160);
+    background-color: #baf5f2;
+    padding: 5px;
+    border-radius: 6px;
+    font-weight: normal;
+}
+td a:last-child{
+    text-decoration: none;
+    color: #a72121;
+    background-color: rgb(236, 171, 171);
+    padding: 5px;
+    border-radius: 6px;
+    font-weight: normal;
+}
+td a:last-child:hover{
+    color: #fff;
+    background-color: red;
+}
+td a:first-child:hover{
+    color: #fff;
+    background-color: darkgreen;
+}
+tr td:first-child{
+    font-weight: bold;
+    text-align: center;
+    color: #000;
+}
+td{color: #949499; font-weight: bold;}
+tr td:last-child{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+}
+tbody tr{
+    border-bottom: 1px solid #b5b5c362;
+}
+/* * Registros estilos */
+.section-all-container{
+    width: 100%;
+    padding: 100px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.content-registrer-form{
+    width: 90%;
+    max-width: 550px;
+    padding: 20px;
+    background-color: #89CFF3;
+    border-radius: 8px;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.5);
+}
+.content-registrer-form > h2{
+    margin-bottom: 20px;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    background-color: #0174BE;
+    padding: 8px;
+    display: inline-block;
+    border-radius: 8px;
+    color: #fff;
+}
+.form-types{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.form-types > label{
+    font-size: 1.1rem;
+}
+
+.form-types > input{
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    transition: all .15s ease-in;
+}
+.form-types > input:focus{
+    outline: none;
+    transform: scale(1.05);
+}
+.btn-submit{
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 15px;
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+}

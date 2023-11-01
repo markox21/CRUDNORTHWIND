@@ -6,12 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Listado de Clientes</title>
+    <link rel="stylesheet" href="../../public/css/style.css">
 </head>
 <body>
+
+    <nav class="navBar-home">
+        <ul class="list-ul-Nav">
+            <li><a href="../../index.php">Home</a></li>
+            <li><a href="../employee/index.php">Empleado</a></li>
+            <li><a href="./index.php">Cliente</a></li>
+            <li><a href="../order/index.php">Order</a></li>
+            <li><a href="../categories/index.php">Categorias</a></li>
+            <li><a href="../products/index.php">Productos</a></li>
+        </ul>
+    </nav>
+
     <h1>Listado de Clientes</h1>
 
     <a href="customerInsert.php">Registrar</a>
-    <table border="1">
+    <table>
         <tr>
             <th>Customer ID</th>
             <th>Company Name</th>

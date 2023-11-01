@@ -2,12 +2,24 @@
 <html>
 <head>
     <title>Listado de Categorias</title>
+    <link rel="stylesheet" href="../../public/css/style.css">
 </head>
 <body>
+
+    <nav class="navBar-home">
+        <ul class="list-ul-Nav">
+            <li><a href="../../index.php">Home</a></li>
+            <li><a href="../employee/index.php">Empleado</a></li>
+            <li><a href="../customer/index.php">Cliente</a></li>
+            <li><a href="../order/index.php">Order</a></li>
+            <li><a href="./index.php">Categorias</a></li>
+            <li><a href="../products/index.php">Productos</a></li>
+        </ul>
+    </nav>
     <h1>Listado de Categorias</h1>
 
     <a href="categoryInsert.php">Registrar Categoria</a>
-    <table border="1">
+    <table>
         <tr>
             <th>Category ID</th>
             <th>Category Name</th>

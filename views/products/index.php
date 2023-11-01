@@ -2,10 +2,23 @@
 <html>
 <head>
     <title>Lista de Productos</title>
+    <link rel="stylesheet" href="../../public/css/style.css">
 </head>
 <body>
+
+    <nav class="navBar-home">
+        <ul class="list-ul-Nav">
+            <li><a href="../../index.php">Home</a></li>
+            <li><a href="../employee/index.php">Empleado</a></li>
+            <li><a href="../customer/index.php">Cliente</a></li>
+            <li><a href="../order/index.php">Order</a></li>
+            <li><a href="../categories/index.php">Categorias</a></li>
+            <li><a href="./index.php">Productos</a></li>
+        </ul>
+    </nav>
     <h1>Lista de Productos</h1>
-    <table border="1">
+    <a href='./productosInsertView.php'> Ingresar Producto </a>
+    <table>
         <tr>
             <th>ID</th>
             <th>Nombre del Producto</th>
