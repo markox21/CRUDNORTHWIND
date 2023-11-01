@@ -5,15 +5,15 @@
 </head>
 <body>
     <h1>Ingresar Producto</h1>
-    <form action="../controller/productosController/productInsertController.php" method="POST">
-        
+    <form action="../../controller/productsController/productInsertController.php" method="POST">
+
         <label for="productName">Nombre del Producto:</label>
         <input type="text" name="productName" required><br>
         
         <label for="companyName">Nombre de la Compañía:</label>
         <input type="text" name="companyName" required><br>
         
-        <label for="categoryName">Nombre de la Categoría:</label>
+        <label for="categoryName">Id de la categoria:</label>
         <input type="text" name="categoryName" required><br>
 
         <label for="quantityPerUnit">Cantidad por Unidad:</label>
