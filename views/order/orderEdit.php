@@ -8,11 +8,11 @@
 </head>
 
 <?php
-require("../../controller/orderController/orderShowController.php");
-
-$recibirID = $_GET['id'];
-$mostrar = new orderController;
-$ordersEdit = $mostrar->showUpdateOrders($recibirID);
+    require("../../controller/orderController/orderShowController.php");
+    
+    $recibirID = $_GET['id'];
+    $mostrar = new orderController;
+    $ordersEdit = $mostrar->showUpdateOrders($recibirID);
 
 ?>
 <body>
