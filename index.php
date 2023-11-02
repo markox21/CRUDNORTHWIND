@@ -26,6 +26,7 @@
                 <h2 class="title-h2">NORTHWIND</h2>
             </div>
         </div>
+    <img src="./public/img/men.png" alt="" class="men-banner">
     </main>
 </body>
 </html>

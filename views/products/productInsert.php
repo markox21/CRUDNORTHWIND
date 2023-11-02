@@ -12,8 +12,8 @@
             <li><a href="../employee/index.php">Empleado</a></li>
             <li><a href="../customer/index.php">Cliente</a></li>
             <li><a href="../order/index.php">Order</a></li>
-            <li><a href="./index.php">Categorias</a></li>
-            <li><a href="../products/index.php">Productos</a></li>
+            <li><a href="../categories/index.php">Categorias</a></li>
+            <li><a href="./index.php">Productos</a></li>
         </ul>
     </nav>
     <h1>Ingresar Producto</h1>
