@@ -24,10 +24,10 @@
         <input type="text" name="productNameUpdate" required value= "<?php echo $value->ProductName; ?>"><br>
         
         <label for="companyNameUpdate">Nombre de la Compañía:</label>
-        <input type="text" name="companyNameUpdate" required value= "<?php echo $value->SupplierID; ?>"><br>
+        <input type="text" name="companyNameUpdate" required value= "<?php echo $value->SupplierName; ?>"><br>
         
         <label for="categoryNameUpdate">Id de la categoria:</label>
-        <input type="text" name="categoryNameUpdate" required value= "<?php echo $value->CategoryID; ?>"><br>
+        <input type="text" name="categoryNameUpdate" required value= "<?php echo $value->CategoryName; ?>"><br>
 
         <label for="quantityPerUnitUpdate">Cantidad por Unidad:</label>
         <input type="text" name="quantityPerUnitUpdate" required value= "<?php echo $value->QuantityPerUnit; ?>"><br>

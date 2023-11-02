@@ -14,7 +14,7 @@
             <th>Order ID</th>
             <th>Company Name</th>
             <th>Contact Name</th>
-            <th>Company Name</th>
+            <th>Contact Title</th>
             <th>Phone</th>
             <th>Product Name</th>
             <th>Unit Price</th>

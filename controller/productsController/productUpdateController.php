@@ -18,11 +18,11 @@ require ("../../models/productModel.php");
         $reorderLevelUpdate = $_POST['reorderLevelUpdate'];
         $discontinuedUpdate = $_POST['discontinuedUpdate'];
 
-        echo $productIDUpdate, $productNameUpdate, $companyNameUpdate, $categoryNameUpdate, $quantityPerUnitUpdate, $unitPriceUpdate, $unitsInStockUpdate, $unitsOnOrderUpdate, $reorderLevelUpdate, $discontinuedUpdate;
+        /* echo $productIDUpdate, $productNameUpdate, $companyNameUpdate, $categoryNameUpdate, $quantityPerUnitUpdate, $unitPriceUpdate, $unitsInStockUpdate, $unitsOnOrderUpdate, $reorderLevelUpdate, $discontinuedUpdate; */
 
 
-        /* $productModel = new productModel();
+        $productModel = new productModel();
         $productModel->updateProduct($productIDUpdate, $productNameUpdate, $companyNameUpdate, $categoryNameUpdate, $quantityPerUnitUpdate, $unitPriceUpdate, $unitsInStockUpdate, $unitsOnOrderUpdate, $reorderLevelUpdate, $discontinuedUpdate);
 
-        header("Location: ../../views/products");  */
+        header("Location: ../../views/products");
     }

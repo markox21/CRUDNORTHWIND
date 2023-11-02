@@ -12,7 +12,7 @@ class OrderController {
 
     public function showUpdateOrders($id){
         $orderModel = new OrderModel();
-        $orderController = $orderModel->selectOrder($id);
+        $orderController = $orderModel->getOneOrder($id);
         
         return $orderController;
     }
