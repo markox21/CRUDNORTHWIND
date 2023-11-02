@@ -31,6 +31,35 @@ class OrderModel {
            }
     }
 
+    public function insertOrders($CustomerID, $EmployeeID, $OrderDate, $RequiredDate, $ShippedDate, $ShipVia, $Freight, $ShipName, $ShipAddress, $ShipCity, $ShipRegion, $ShipPostalCode, $ShipCountry) {
+        try{
+
+            $pdo = $this->database->connect();
+
+            $stmt = $pdo->prepare("CALL Sp_Ins_Order(:ord_CustomerID :ord_EmployeeID, :ord_ShipVia, :ord_OrderDate, :ord_RequiredDate, :ord_ShippedDate, :ord_Freight, :ord_ShipName, :ord_ShipAddress, :ord_ShipCity, :ord_ShipRegion, :ord_ShipPostalCode, :ord_ShipCountry,)");
+            
+            $stmt->bindParam(':ord_CustomerID', $CustomerID, PDO::PARAM_STR);
+            $stmt->bindParam(':ord_EmployeeID', $EmployeeID, PDO::PARAM_STR);
+            $stmt->bindParam(':ord_ShipVia', $OrderDate, PDO::PARAM_STR);
+            $stmt->bindParam(':ord_OrderDate', $RequiredDate, PDO::PARAM_STR);
+            $stmt->bindParam(':ord_RequiredDate', $ShippedDate, PDO::PARAM_STR);
+            $stmt->bindParam(':ord_ShippedDate', $ShipVia, PDO::PARAM_STR);
+            $stmt->bindParam(':ord_Freight', $Freight, PDO::PARAM_STR);
+            $stmt->bindParam(':ord_ShipName', $ShipName, PDO::PARAM_STR);
+            $stmt->bindParam(':ord_ShipAddress', $ShipAddress, PDO::PARAM_STR);
+            $stmt->bindParam(':ord_ShipCity', $ShipCity, PDO::PARAM_STR);
+            $stmt->bindParam(':ord_ShipRegion', $ShipRegion, PDO::PARAM_STR);
+            $stmt->bindParam(':ord_ShipPostalCode', $ShipPostalCode, PDO::PARAM_STR);
+            $stmt->bindParam(':ord_ShipCountry', $ShipCountry, PDO::PARAM_STR);
+
+            $stmt->execute();
+        
+        }
+        catch(PDOException $e){
+            echo $e->getMessage();
+        }
+    }
+
     public function editOrders($OrderIDUpdate, $CustomerIDUpdate, $EmployeeIDUpdate, $OrderDateUpdate, $RequiredDateUpdate, $ShippedDateUpdate, $ShipViaUpdate, $FreightUpdate, $ShipNameUpdate, $ShipAddressUpdate, $ShipCityUpdate, $ShipRegionUpdate, $ShipPostalCodeUpdate, $ShipCountryUpdate) {
         try{
 
