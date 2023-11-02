@@ -39,9 +39,9 @@ $customersEdit = $mostrar->showUpdateCustomer($recibirID);
                 <h2>Editar Cliente</h2>
                 <form action="../../controller/customerController/customerUpdateController.php" method="post" class="form-types">
                     <label for="CustomerIDUpdate">ID customer</label>
-                    <input type="text" name= "CustomerIDUpdate" DISABLED value="<?php echo $recibirID;?>"><br>
+                    <input type="text" name= "CustomerIDUpdate" value="<?php echo $recibirID;?>"><br>
                     <label for="CompanyNameUpdate">Company Name</label>
-                    <input type="text" name="CompanyNameUpdate" DISABLED value="<?php echo $customersEdit->CompanyName;?>"><br>
+                    <input type="text" name="CompanyNameUpdate" value="<?php echo $customersEdit->CompanyName;?>"><br>
                     <label for="ContactNameUpdate">Contact Name</label>
                     <input type="text" name="ContactNameUpdate" value="<?php echo $customersEdit->ContactName;?>"><br>
                     <label for="ContactTitleUpdate">Contact Title</label>

@@ -22,7 +22,7 @@
     <section  class="section-all-container">
             <div class="content-registrer-form">
                 <h2>Registrar Producto</h2>
-                <form action="../../controller/productosController/productInsertController.php" method="POST" class="form-types">
+                <form action="../../controller/productsController/productInsertController.php" method="POST" class="form-types">
         
                     <label for="productName">Nombre del Producto:</label>
                     <input type="text" name="productName" required><br>

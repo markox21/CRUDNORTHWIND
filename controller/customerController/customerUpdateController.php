@@ -14,6 +14,13 @@
         $PhoneUpdate = $_POST['PhoneUpdate'];
         $FaxUpdate = $_POST['FaxUpdate'];
 
+        /* echo $CustomerIDUpdate, $CompanyNameUpdate, 
+            $ContactNameUpdate, $ContactTitleUpdate, 
+            $AddressUpdate, $CityUpdate, 
+            $RegionUpdate, $PostalCodeUpdate, 
+            $CountryUpdate, $PhoneUpdate, 
+            $FaxUpdate; */
+
         $update = new CustomerModel;
         $result = $update->editCustomer(
             $CustomerIDUpdate, $CompanyNameUpdate, 
