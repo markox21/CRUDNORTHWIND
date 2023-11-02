@@ -17,7 +17,9 @@
         </ul>
     </nav>
     <h1>Lista de Productos</h1>
-    <a href='./productosInsertView.php'> Ingresar Producto </a>
+
+    <a href="productinsert.php">Registrar Producto</a>
+
     <table>
         <tr>
             <th>ID</th>
@@ -50,7 +52,9 @@
                 <td><?php echo $product['Niveles']; ?></td>
                 <td><?php echo $product['Discontinued']; ?></td>
                 <td>
-                <a href="../../controller/productsController/productDeleteController.php?id=<?php echo $product['ID_P']; ?>">Eliminar</a>
+                
+                    <a href="productUpdate.php?id=<?php echo $product['ID_P']; ?>">Editar</a>
+                    <a href="../../controller/productsController/productDeleteController.php?id=<?php echo $product['ID_P']; ?>">Eliminar</a>
 
                 </td>
             </tr>

@@ -9,6 +9,12 @@ class ProductController {
         return $products;
     }
     
+    public function showOneProduct($id) {
+        $productModel = new ProductModel();
+        $products = $productModel->getOneProduct($id);
+
+        return $products;
+    }
 }
 
 

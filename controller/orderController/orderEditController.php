@@ -3,18 +3,29 @@
 
     if ($_POST) {
         $OrderIDUpdate = $_POST['OrderIDUpdate'];
-        $CompanyNameUpdate = $_POST['CompanyNameUpdate'];
-        $ContactNameUpdate = $_POST['ContactNameUpdate'];
-        $ShipperNameUpdate = $_POST['ShipperNameUpdate'];
-        $PhoneUpdate = $_POST['PhoneUpdate'];
-        $ProductNameUpdate = $_POST['ProductNameUpdate'];
-        $UnitPriceUpdate = $_POST['UnitPriceUpdate'];
-        $QuantityUpdate = $_POST['QuantityUpdate'];
-        $DiscountUpdate = $_POST['DiscountUpdate'];
+        $CustomerIDUpdate = $_POST['CustomerIDUpdate'];
+
+        $EmployeeIDUpdate = $_POST['EmployeeIDUpdate'];
+        $OrderDateUpdate = $_POST['OrderDateUpdate'];
+
+        $RequiredDateUpdate = $_POST['RequiredDateUpdate'];
+        $ShippedDateUpdate = $_POST['ShippedDateUpdate'];
+        $ShipViaUpdate = $_POST['ShipViaUpdate'];
+
+        $FreightUpdate = $_POST['FreightUpdate'];
+        $ShipNameUpdate = $_POST['ShipNameUpdate'];
+
+        $ShipAddressUpdate = $_POST['ShipAddressUpdate'];
+        $ShipCityUpdate = $_POST['ShipCityUpdate'];
+
+        $ShipRegionUpdate = $_POST['ShipRegionUpdate'];
+        $ShipPostalCodeUpdate = $_POST['ShipPostalCodeUpdate'];
+
+        $ShipCountryUpdate = $_POST['ShipCountryUpdate'];
 
         $update = new OrderModel;
-        $result = $update->editOrders($CustomerIDUpdate, $CompanyNameUpdate, $ContactNameUpdate, $ContactTitleUpdate, $AddressUpdate, $CityUpdate, $RegionUpdate, $PostalCodeUpdate, $CountryUpdate, $PhoneUpdate, $FaxUpdate);
+        $result = $update->editOrders($OrderIDUpdate, $CustomerIDUpdate, $EmployeeIDUpdate, $OrderDateUpdate, $RequiredDateUpdate, $ShippedDateUpdate, $ShipViaUpdate, $FreightUpdate, $ShipNameUpdate, $ShipAddressUpdate, $ShipCityUpdate, $ShipRegionUpdate, $ShipPostalCodeUpdate, $ShipCountryUpdate);
 
-        header("location: ../../views/orderView");
+        header("location: ../../views/order");
     }
 ?>

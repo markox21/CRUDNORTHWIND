@@ -13,7 +13,7 @@ require("../../controller/orderController/orderShowController.php");
 
 $recibirID = $_GET['id'];
 $mostrar = new orderController;
-$customersEdit = $mostrar->showUpdateOrders($recibirID);
+$ordersEdit = $mostrar->showUpdateOrders($recibirID);
 
 ?>
 <body>
@@ -35,29 +35,45 @@ $customersEdit = $mostrar->showUpdateOrders($recibirID);
     <section  class="section-all-container">
             <div class="content-registrer-form">
                 <h2>Editar Orden</h2>
-                <form action="../../controller/orderController/orderEditController.php" method="post" class="form-types">
-                    <label for="OrderIDUpdate">ID customer</label>
-                    <input type="text" name= "OrderIDUpdate" value="<?php echo $ordersEdit->ID_Orden;?>"><br>
-                    <label for="CompanyNameUpdate">Company Name</label>
-                    <input type="text" name="CompanyNameUpdate" value="<?php echo $ordersEdit->Nombre_Compañía;?>"><br>
-                    <label for="ContactNameUpdate">Contact Name</label>
-                    <input type="text" name="ContactNameUpdate" value="<?php echo $ordersEdit->Nombre_Contacto;?>"><br>
-                    <label for="ShipperNameUpdate">Company Name</label>
-                    <input type="text" name="ShipperNameUpdate" value="<?php echo $ordersEdit->Transportista;?>"><br>
-                    <label for="PhoneUpdate">Phone</label>
-                    <input type="text" name="PhoneUpdate" value="<?php echo $ordersEdit->Telefono;?>"><br>
-                    <label for="ProductNameUpdate">Product Name</label>
-                    <input type="text" name="ProductNameUpdate" value="<?php echo $ordersEdit->Nombre_Producto;?>"><br>
-                    <label for="UnitPriceUpdate">Unit Price</label>
-                    <input type="text" name="UnitPriceUpdate" value="<?php echo $ordersEdit->Precio_Unitario;?>"><br>
-                    <label for="QuantityUpdate">Quantity</label>
-                    <input type="text" name="QuantityUpdate" value="<?php echo $ordersEdit->Cantidad;?>"><br>
-                    <label for="DiscountUpdate">Discount</label>
-                    <input type="text" name="DiscountUpdate" value="<?php echo $ordersEdit->Descuento;?>"><br>
+                    <form action="../../controller/orderController/orderEditController.php" method="post" class="form-types">
+                        <label for="OrderIDUpdate">OrderId</label>
+                        <input type="text" name= "OrderIDUpdate" value="<?php echo $ordersEdit->OrderID;?>"><br>
+                        <label for="CustomerIDUpdate">CustomerID</label>
+                        <input type="text" name="CustomerIDUpdate" value="<?php echo $ordersEdit->CustomerID;?>"><br>
 
-                    <button type="submit" class="btn-submit">Confirmar</button>
+                        <label for="EmployeeIDUpdate">EmployeeID</label>
+                        <input type="text" name="EmployeeIDUpdate" value="<?php echo $ordersEdit->EmployeeID;?>"><br>
+                        <label for="OrderDateUpdate">OrderDate</label>
+                        <input type="text" name="OrderDateUpdate" value="<?php echo $ordersEdit->OrderDate;?>"><br>
+
+                        <label for="RequiredDateUpdate">RequiredDate</label>
+                        <input type="text" name="RequiredDateUpdate" value="<?php echo $ordersEdit->RequiredDate;?>"><br>
+                        <label for="ShippedDateUpdate">ShippedDate</label>
+                        <input type="text" name="ShippedDateUpdate" value="<?php echo $ordersEdit->ShippedDate;?>"><br>
+                        <label for="ShipViaUpdate">ShipVia</label>
+                        <input type="text" name="ShipViaUpdate" value="<?php echo $ordersEdit->ShipVia;?>"><br>
+
+                        <label for="FreightUpdate">Freight</label>
+                        <input type="text" name="FreightUpdate" value="<?php echo $ordersEdit->Freight;?>"><br>
+                        <label for="ShipNameUpdate">ShipName</label>
+                        <input type="text" name="ShipNameUpdate" value="<?php echo $ordersEdit->ShipName;?>"><br>
+
+                        <label for="ShipAddressUpdate">ShipAddress</label>
+                        <input type="text" name="ShipAddressUpdate" value="<?php echo $ordersEdit->ShipAddress;?>"><br>
+                        <label for="ShipCityUpdate">ShipCity</label>
+                        <input type="text" name="ShipCityUpdate" value="<?php echo $ordersEdit->ShipCity;?>"><br>
+
+                        <label for="ShipRegionUpdate">ShipRegion</label>
+                        <input type="text" name="ShipRegionUpdate" value="<?php echo $ordersEdit->ShipRegion;?>"><br>
+                        <label for="ShipPostalCodeUpdate">ShipPostalCode</label>
+                        <input type="text" name="ShipPostalCodeUpdate" value="<?php echo $ordersEdit->ShipPostalCode;?>"><br>
+
+                        <label for="ShipCountryUpdate">ShipCountry</label>
+                        <input type="text" name="ShipCountryUpdate" value="<?php echo $ordersEdit->ShipCountry;?>"><br>
+                        <button type="submit" class="btn-submit">Confirmar</button>
                 </form>
             </div>
         </section>
+    
 </body>
 </html>
